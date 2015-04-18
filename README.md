@@ -48,14 +48,14 @@
 	
 3. Um auf Daten effizient zugreifen zu können, werden diese oft an bestimmte Stel- len im Speicher gelegt. Die Speicherausrichtung (engl.: alignment) wirkt sich auf die Geschwindigkeit, mit der auf sie vom Prozessor zugegriffen werden kann, aus. Zum Beispiel können x86-Prozessoren n Byte große Variablen schneller verarbeiten, wenn diese an durch n teilbaren Adressen (natural boundaries) im Speicher liegen. Dadurch können sich Lücken in Datenstrukturen ergeben.Wie wird ein Compiler die folgende Struktur in den Speicher eines x86-Rechners legen? Der Compiler soll hierbei keinerlei Optimierungen vornehmen (-O0)! Die C-Kommentare geben die Werte der einzelnen Elemente an. Verifizieren Sie Ihre Lösung mit Hilfes eines C-Programms, welches Sie zur Laufzeit mit dem Debugger untersuchen.
 
-	struct bigone {
-		char index;		/* =7 */
-		int avalue;		/* = -512 */
-		short shortvalue;	/* =127 */
-		char space;		/* =32 */
-		short sarray [2];	/* = {0x123, 0x456} */
-		int anothervalue;	/* = 4096 */
-	}
+		struct bigone {
+			char index;		/* =7 */
+			int avalue;		/* = -512 */
+			short shortvalue;	/* =127 */
+			char space;		/* =32 */
+			short sarray [2];	/* = {0x123, 0x456} */
+			int anothervalue;	/* = 4096 */
+		}
 	
 ## Projektmanagement mit Make
 
